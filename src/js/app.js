@@ -15,3 +15,7 @@ document.querySelector('#book-form').addEventListener('submit', event => {
   UI.addBookToList(book);
   UI.clearFields();
 });
+
+document.querySelector('#book-list').addEventListener('click', event => {
+  UI.deleteBook(event.target);
+});
