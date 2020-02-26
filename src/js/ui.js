@@ -31,6 +31,12 @@ export class UI {
     list.appendChild(row);
   }
 
+  static deleteBook(element) {
+    if (element.classList.contains('delete')) {
+      element.parentElement.parentElement.remove();
+    }
+  }
+
   static clearFields() {
     document.querySelector('#title').value = '';
     document.querySelector('#author').value = '';
