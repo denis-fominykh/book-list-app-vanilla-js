@@ -9,5 +9,38 @@
 </head>
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
+
+  <div class="container mt-4">
+    <h1 class="display-4 text-center">
+      <i class="fas fa-book-open text-primary"></i>
+      My<span class="text-primary">Book</span>List
+    </h1>
+    <form id="book-form">
+      <div class="from-group">
+        <label for="title">Title</label>
+        <input class="form-control" id="title" type="text" >
+      </div>
+      <div class="from-group">
+        <label for="author">Author</label>
+        <input class="form-control" id="author" type="text" >
+      </div>
+      <div class="from-group">
+        <label for="isbn">ISBN#</label>
+        <input class="form-control" id="isbn" type="text" >
+      </div>
+      <input type="submit" class="btn btn-primary btn-block mt-3" value="Add Book">
+    </form>
+    <table class="table table-striped mt-5">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>ISBN#</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="book-list"></tbody>
+    </table>
+  </div>
 </body>
 </html>
