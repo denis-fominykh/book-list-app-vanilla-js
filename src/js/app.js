@@ -11,7 +11,7 @@ document.querySelector('#book-form').addEventListener('submit', event => {
   const isbn = document.querySelector('#isbn').value;
 
   if (title === '' || author === '' || isbn === '') {
-    alert('Please fill in all fields');
+    UI.showAlert('Please fill in all fields', 'danger');
   } else {
     const book = new Book(title, author, isbn);
 
