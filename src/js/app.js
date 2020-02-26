@@ -10,10 +10,14 @@ document.querySelector('#book-form').addEventListener('submit', event => {
   const author = document.querySelector('#author').value;
   const isbn = document.querySelector('#isbn').value;
 
-  const book = new Book(title, author, isbn);
+  if (title === '' || author === '' || isbn === '') {
+    alert('Please fill in all fields');
+  } else {
+    const book = new Book(title, author, isbn);
 
-  UI.addBookToList(book);
-  UI.clearFields();
+    UI.addBookToList(book);
+    UI.clearFields();
+  }
 });
 
 document.querySelector('#book-list').addEventListener('click', event => {
