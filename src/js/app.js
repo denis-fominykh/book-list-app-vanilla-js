@@ -13,4 +13,5 @@ document.querySelector('#book-form').addEventListener('submit', event => {
   const book = new Book(title, author, isbn);
 
   UI.addBookToList(book);
+  UI.clearFields();
 });
