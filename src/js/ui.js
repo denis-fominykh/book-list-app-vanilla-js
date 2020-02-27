@@ -1,17 +1,8 @@
+import { Store } from './store';
+
 export class UI {
   static displayBooks() {
-    const StoredBooks = [
-      {
-        title: 'Book One',
-        author: 'John Doe',
-        isbn: '238912',
-      },
-      {
-        title: 'Book Two',
-        author: 'Jane Doe',
-        isbn: '853153',
-      },
-    ];
+    const StoredBooks = Store.getBooks();
 
     const books = StoredBooks;
     books.forEach(book => UI.addBookToList(book));
